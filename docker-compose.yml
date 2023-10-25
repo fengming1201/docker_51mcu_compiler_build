@@ -4,9 +4,6 @@ services:
     image: 139.9.186.120:8080/sdcc_compiler:latest
     container_name: sdcc-compiler
     restart: unless-stopped
-    command: /bin/bash
-    stdin_open: true
-    tty: true
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
     volumes:

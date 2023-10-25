@@ -33,3 +33,4 @@ RUN cp /etc/locale.gen /etc/locale.gen.bak;\
 		locale-gen
 ENV PATH=$PATH:/usr/share/Hex2bin-2.5
 
+CMD ["/bin/bash"]
