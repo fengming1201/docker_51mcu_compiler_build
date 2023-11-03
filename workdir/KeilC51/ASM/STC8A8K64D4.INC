@@ -1,0 +1,622 @@
+;STC8A8K64D4.INC
+;包含本头文件后,不用另外再包含"REG51.INC"
+
+$NOMOD51
+
+$SAVE
+$NOLIST
+
+P0          DATA        080H
+P00         BIT         P0.0
+P01         BIT         P0.1
+P02         BIT         P0.2
+P03         BIT         P0.3
+P04         BIT         P0.4
+P05         BIT         P0.5
+P06         BIT         P0.6
+P07         BIT         P0.7
+                        
+SP          DATA        081H
+DPL         DATA        082H
+DPH         DATA        083H
+S4CON       DATA        084H
+S4BUF       DATA        085H
+PCON        DATA        087H
+                        
+TCON        DATA        088H
+TF1         BIT         TCON.7
+TR1         BIT         TCON.6
+TF0         BIT         TCON.5
+TR0         BIT         TCON.4
+IE1         BIT         TCON.3
+IT1         BIT         TCON.2
+IE0         BIT         TCON.1
+IT0         BIT         TCON.0
+                        
+TMOD        DATA        089H
+TL0         DATA        08AH
+TL1         DATA        08BH
+TH0         DATA        08CH
+TH1         DATA        08DH
+AUXR        DATA        08EH
+INTCLKO     DATA        08FH
+                        
+P1          DATA        090H
+P10         BIT         P1.0
+P11         BIT         P1.1
+P12         BIT         P1.2
+P13         BIT         P1.3
+P14         BIT         P1.4
+P15         BIT         P1.5
+P16         BIT         P1.6
+P17         BIT         P1.7
+                        
+P1M1        DATA        091H
+P1M0        DATA        092H
+P0M1        DATA        093H
+P0M0        DATA        094H
+P2M1        DATA        095H
+P2M0        DATA        096H
+                        
+SCON        DATA        098H
+SM0         BIT         SCON.7
+SM1         BIT         SCON.6
+SM2         BIT         SCON.5
+REN         BIT         SCON.4
+TB8         BIT         SCON.3
+RB8         BIT         SCON.2
+TI          BIT         SCON.1
+RI          BIT         SCON.0
+                        
+SBUF        DATA        099H
+S2CON       DATA        09AH
+S2BUF       DATA        09BH
+IRCBAND     DATA        09DH
+LIRTRIM     DATA        09EH
+IRTRIM      DATA        09FH
+                        
+P2          DATA        0A0H
+P20         BIT         P2.0
+P21         BIT         P2.1
+P22         BIT         P2.2
+P23         BIT         P2.3
+P24         BIT         P2.4
+P25         BIT         P2.5
+P26         BIT         P2.6
+P27         BIT         P2.7
+                        
+BUS_SPEED   DATA        0A1H
+P_SW1       DATA        0A2H
+                        
+IE          DATA        0A8H
+EA          BIT         IE.7
+ELVD        BIT         IE.6
+EADC        BIT         IE.5
+ES          BIT         IE.4
+ET1         BIT         IE.3
+EX1         BIT         IE.2
+ET0         BIT         IE.1
+EX0         BIT         IE.0
+                        
+SADDR       DATA        0A9H
+WKTCL       DATA        0AAH
+WKTCH       DATA        0ABH
+S3CON       DATA        0ACH
+S3BUF       DATA        0ADH
+TA          DATA        0AEH
+IE2         DATA        0AFH
+                        
+P3          DATA        0B0H
+P30         BIT         P3.0
+P31         BIT         P3.1
+P32         BIT         P3.2
+P33         BIT         P3.3
+P34         BIT         P3.4
+P35         BIT         P3.5
+P36         BIT         P3.6
+P37         BIT         P3.7
+                        
+RD          BIT         P3.7
+WR          BIT         P3.6
+T1          BIT         P3.5
+T0          BIT         P3.4
+INT1        BIT         P3.3
+INT0        BIT         P3.2
+TXD         BIT         P3.1
+RXD         BIT         P3.0
+                        
+P3M1        DATA        0B1H
+P3M0        DATA        0B2H
+P4M1        DATA        0B3H
+P4M0        DATA        0B4H
+IP2         DATA        0B5H
+IP2H        DATA        0B6H
+IPH         DATA        0B7H
+                        
+IP          DATA        0B8H
+PPCA        BIT         IP.7
+PLVD        BIT         IP.6
+PADC        BIT         IP.5
+PS          BIT         IP.4
+PT1         BIT         IP.3
+PX1         BIT         IP.2
+PT0         BIT         IP.1
+PX0         BIT         IP.0
+                        
+SADEN       DATA        0B9H
+P_SW2       DATA        0BAH
+ADC_CONTR   DATA        0BCH
+ADC_RES     DATA        0BDH
+ADC_RESL    DATA        0BEH
+                        
+P4          DATA        0C0H
+P40         BIT         P4.0
+P41         BIT         P4.1
+P42         BIT         P4.2
+P43         BIT         P4.3
+P44         BIT         P4.4
+P45         BIT         P4.5
+P46         BIT         P4.6
+P47         BIT         P4.7
+                        
+WDT_CONTR   DATA        0C1H
+IAP_DATA    DATA        0C2H
+IAP_ADDRH   DATA        0C3H
+IAP_ADDRL   DATA        0C4H
+IAP_CMD     DATA        0C5H
+IAP_TRIG    DATA        0C6H
+IAP_CONTR   DATA        0C7H
+                        
+P5          DATA        0C8H
+P50         BIT         P5.0
+P51         BIT         P5.1
+P52         BIT         P5.2
+P53         BIT         P5.3
+P54         BIT         P5.4
+P55         BIT         P5.5
+P56         BIT         P5.6
+P57         BIT         P5.7
+                        
+P5M1        DATA        0C9H
+P5M0        DATA        0CAH
+P6M1        DATA        0CBH
+P6M0        DATA        0CCH
+SPSTAT      DATA        0CDH
+SPCTL       DATA        0CEH
+SPDAT       DATA        0CFH
+                        
+PSW         DATA        0D0H
+CY          BIT         PSW.7
+AC          BIT         PSW.6
+F0          BIT         PSW.5
+RS1         BIT         PSW.4
+RS0         BIT         PSW.3
+OV          BIT         PSW.2
+P           BIT         PSW.0
+                        
+T4T3M       DATA        0D1H
+T4H         DATA        0D2H
+T4L         DATA        0D3H
+T3H         DATA        0D4H
+T3L         DATA        0D5H
+T2H         DATA        0D6H
+T2L         DATA        0D7H
+                              
+T3T4M       DATA        0D1H
+TH4         DATA        0D2H
+TL4         DATA        0D3H
+TH3         DATA        0D4H
+TL3         DATA        0D5H
+TH2         DATA        0D6H
+TL2         DATA        0D7H
+                  
+CCON        DATA        0D8H
+CF          BIT         CCON.7
+CR          BIT         CCON.6
+CCF3        BIT         CCON.3
+CCF2        BIT         CCON.2
+CCF1        BIT         CCON.1
+CCF0        BIT         CCON.0
+                        
+CMOD        DATA        0D9H
+CCAPM0      DATA        0DAH
+CCAPM1      DATA        0DBH
+CCAPM2      DATA        0DCH
+ADCCFG      DATA        0DEH
+IP3         DATA        0DFH
+ACC         DATA        0E0H
+P7M1        DATA        0E1H
+P7M0        DATA        0E2H
+DPS         DATA        0E3H
+DPL1        DATA        0E4H
+DPH1        DATA        0E5H
+CMPCR1      DATA        0E6H
+CMPCR2      DATA        0E7H
+                        
+P6          DATA        0E8H
+P60         BIT         P6.0
+P61         BIT         P6.1
+P62         BIT         P6.2
+P63         BIT         P6.3
+P64         BIT         P6.4
+P65         BIT         P6.5
+P66         BIT         P6.6
+P67         BIT         P6.7
+                        
+CL          DATA        0E9H
+CCAP0L      DATA        0EAH
+CCAP1L      DATA        0EBH
+CCAP2L      DATA        0ECH
+IP3H        DATA        0EEH
+AUXINTIF    DATA        0EFH
+B           DATA        0F0H
+PWMSET      DATA        0F1H
+PCA_PWM0    DATA        0F2H
+PCA_PWM1    DATA        0F3H
+PCA_PWM2    DATA        0F4H
+IAP_TPS     DATA        0F5H
+PWMCFG      DATA        0F6H
+                        
+P7          DATA        0F8H
+P70         BIT         P7.0
+P71         BIT         P7.1
+P72         BIT         P7.2
+P73         BIT         P7.3
+P74         BIT         P7.4
+P75         BIT         P7.5
+P76         BIT         P7.6
+P77         BIT         P7.7
+                        
+CH          DATA        0F9H
+CCAP0H      DATA        0FAH
+CCAP1H      DATA        0FBH
+CCAP2H      DATA        0FCH
+RSTCFG      DATA        0FFH
+
+;如下特殊功能寄存器位于扩展RAM区域
+;访问这些寄存器,需先将P_SW2的BIT7设置为1,才可正常读写
+
+PWMC            EQU     0FF00H
+PWMCH           EQU     0FF00H
+PWMCL           EQU     0FF01H
+PWMCKS          EQU     0FF02H
+PWMTADC         EQU     0FF03H
+PWMTADCH        EQU     0FF03H
+PWMTADCL        EQU     0FF04H
+PWMIF           EQU     0FF05H
+PWMFDCR         EQU     0FF06H
+PWMDELSEL       EQU     0FF07H
+PWM0T1          EQU     0FF10H
+PWM0T1H         EQU     0FF10H
+PWM0T1L         EQU     0FF11H
+PWM0T2          EQU     0FF12H
+PWM0T2H         EQU     0FF12H
+PWM0T2L         EQU     0FF13H
+PWM0CR          EQU     0FF14H
+PWM0HLD         EQU     0FF15H
+PWM1T1          EQU     0FF18H
+PWM1T1H         EQU     0FF18H
+PWM1T1L         EQU     0FF19H
+PWM1T2          EQU     0FF1AH
+PWM1T2H         EQU     0FF1AH
+PWM1T2L         EQU     0FF1BH
+PWM1CR          EQU     0FF1CH
+PWM1HLD         EQU     0FF1DH
+PWM2T1          EQU     0FF20H
+PWM2T1H         EQU     0FF20H
+PWM2T1L         EQU     0FF21H
+PWM2T2          EQU     0FF22H
+PWM2T2H         EQU     0FF22H
+PWM2T2L         EQU     0FF23H
+PWM2CR          EQU     0FF24H
+PWM2HLD         EQU     0FF25H
+PWM3T1          EQU     0FF28H
+PWM3T1H         EQU     0FF28H
+PWM3T1L         EQU     0FF29H
+PWM3T2          EQU     0FF2AH
+PWM3T2H         EQU     0FF2AH
+PWM3T2L         EQU     0FF2BH
+PWM3CR          EQU     0FF2CH
+PWM3HLD         EQU     0FF2DH
+PWM4T1          EQU     0FF30H
+PWM4T1H         EQU     0FF30H
+PWM4T1L         EQU     0FF31H
+PWM4T2          EQU     0FF32H
+PWM4T2H         EQU     0FF32H
+PWM4T2L         EQU     0FF33H
+PWM4CR          EQU     0FF34H
+PWM4HLD         EQU     0FF35H
+PWM5T1          EQU     0FF38H
+PWM5T1H         EQU     0FF38H
+PWM5T1L         EQU     0FF39H
+PWM5T2          EQU     0FF3AH
+PWM5T2H         EQU     0FF3AH
+PWM5T2L         EQU     0FF3BH
+PWM5CR          EQU     0FF3CH
+PWM5HLD         EQU     0FF3DH
+PWM6T1          EQU     0FF40H
+PWM6T1H         EQU     0FF40H
+PWM6T1L         EQU     0FF41H
+PWM6T2          EQU     0FF42H
+PWM6T2H         EQU     0FF42H
+PWM6T2L         EQU     0FF43H
+PWM6CR          EQU     0FF44H
+PWM6HLD         EQU     0FF45H
+PWM7T1          EQU     0FF48H
+PWM7T1H         EQU     0FF48H
+PWM7T1L         EQU     0FF49H
+PWM7T2          EQU     0FF4AH
+PWM7T2H         EQU     0FF4AH
+PWM7T2L         EQU     0FF4BH
+PWM7CR          EQU     0FF4CH
+PWM7HLD         EQU     0FF4DH
+
+CLKSEL          EQU     0FE00H
+CLKDIV          EQU     0FE01H
+HIRCCR          EQU     0FE02H
+XOSCCR          EQU     0FE03H
+IRC32KCR        EQU     0FE04H
+MCLKOCR         EQU     0FE05H
+IRCDB           EQU     0FE06H
+
+P0PU            EQU     0FE10H
+P1PU            EQU     0FE11H
+P2PU            EQU     0FE12H
+P3PU            EQU     0FE13H
+P4PU            EQU     0FE14H
+P5PU            EQU     0FE15H
+P6PU            EQU     0FE16H
+P7PU            EQU     0FE17H
+P0NCS           EQU     0FE18H
+P1NCS           EQU     0FE19H
+P2NCS           EQU     0FE1AH
+P3NCS           EQU     0FE1BH
+P4NCS           EQU     0FE1CH
+P5NCS           EQU     0FE1DH
+P6NCS           EQU     0FE1EH
+P7NCS           EQU     0FE1FH
+P0SR            EQU     0FE20H
+P1SR            EQU     0FE21H
+P2SR            EQU     0FE22H
+P3SR            EQU     0FE23H
+P4SR            EQU     0FE24H
+P5SR            EQU     0FE25H
+P6SR            EQU     0FE26H
+P7SR            EQU     0FE27H
+P0DR            EQU     0FE28H
+P1DR            EQU     0FE29H
+P2DR            EQU     0FE2AH
+P3DR            EQU     0FE2BH
+P4DR            EQU     0FE2CH
+P5DR            EQU     0FE2DH
+P6DR            EQU     0FE2EH
+P7DR            EQU     0FE2FH
+P0IE            EQU     0FE30H
+P1IE            EQU     0FE31H
+P2IE            EQU     0FE32H
+P3IE            EQU     0FE33H
+P4IE            EQU     0FE34H
+P5IE            EQU     0FE35H
+P6IE            EQU     0FE36H
+P7IE            EQU     0FE37H
+
+LCMIFCFG        EQU     0FE50H
+LCMIFCFG2       EQU     0FE51H
+LCMIFCR         EQU     0FE52H
+LCMIFSTA        EQU     0FE53H
+LCMIFDATL       EQU     0FE54H
+LCMIFDATH       EQU     0FE55H
+
+I2CCFG          EQU     0FE80H
+I2CMSCR         EQU     0FE81H
+I2CMSST         EQU     0FE82H
+I2CSLCR         EQU     0FE83H
+I2CSLST         EQU     0FE84H
+I2CSLADR        EQU     0FE85H
+I2CTXD          EQU     0FE86H
+I2CRXD          EQU     0FE87H
+I2CMSAUX        EQU     0FE88H
+
+TM2PS           EQU     0FEA2H
+TM3PS           EQU     0FEA3H
+TM4PS           EQU     0FEA4H
+ADCTIM          EQU     0FEA8H
+ADCEXCFG        EQU     0FEADH
+CMPEXCFG        EQU     0FEAEH
+
+P0INTE          EQU     0FD00H
+P1INTE          EQU     0FD01H
+P2INTE          EQU     0FD02H
+P3INTE          EQU     0FD03H
+P4INTE          EQU     0FD04H
+P5INTE          EQU     0FD05H
+P6INTE          EQU     0FD06H
+P7INTE          EQU     0FD07H
+P0INTF          EQU     0FD10H
+P1INTF          EQU     0FD11H
+P2INTF          EQU     0FD12H
+P3INTF          EQU     0FD13H
+P4INTF          EQU     0FD14H
+P5INTF          EQU     0FD15H
+P6INTF          EQU     0FD16H
+P7INTF          EQU     0FD17H
+P0IM0           EQU     0FD20H
+P1IM0           EQU     0FD21H
+P2IM0           EQU     0FD22H
+P3IM0           EQU     0FD23H
+P4IM0           EQU     0FD24H
+P5IM0           EQU     0FD25H
+P6IM0           EQU     0FD26H
+P7IM0           EQU     0FD27H
+P0IM1           EQU     0FD30H
+P1IM1           EQU     0FD31H
+P2IM1           EQU     0FD32H
+P3IM1           EQU     0FD33H
+P4IM1           EQU     0FD34H
+P5IM1           EQU     0FD35H
+P6IM1           EQU     0FD36H
+P7IM1           EQU     0FD37H
+P0WKUE          EQU     0FD40H
+P1WKUE          EQU     0FD41H
+P2WKUE          EQU     0FD42H
+P3WKUE          EQU     0FD43H
+P4WKUE          EQU     0FD44H
+P5WKUE          EQU     0FD45H
+P6WKUE          EQU     0FD46H
+P7WKUE          EQU     0FD47H
+
+CCAPM3          EQU     0FD54H
+CCAP3L          EQU     0FD55H
+CCAP3H          EQU     0FD56H
+PCA_PWM3        EQU     0FD57H
+
+PINIPL          EQU     0FD60H
+PINIPH          EQU     0FD61H
+
+CHIPID0         EQU     0FDE0H
+CHIPID1         EQU     0FDE1H
+CHIPID2         EQU     0FDE2H
+CHIPID3         EQU     0FDE3H
+CHIPID4         EQU     0FDE4H
+CHIPID5         EQU     0FDE5H
+CHIPID6         EQU     0FDE6H
+CHIPID7         EQU     0FDE7H
+CHIPID8         EQU     0FDE8H
+CHIPID9         EQU     0FDE9H
+CHIPID10        EQU     0FDEAH
+CHIPID11        EQU     0FDEBH
+CHIPID12        EQU     0FDECH
+CHIPID13        EQU     0FDEDH
+CHIPID14        EQU     0FDEEH
+CHIPID15        EQU     0FDEFH
+CHIPID16        EQU     0FDF0H
+CHIPID17        EQU     0FDF1H
+CHIPID18        EQU     0FDF2H
+CHIPID19        EQU     0FDF3H
+CHIPID20        EQU     0FDF4H
+CHIPID21        EQU     0FDF5H
+CHIPID22        EQU     0FDF6H
+CHIPID23        EQU     0FDF7H
+CHIPID24        EQU     0FDF8H
+CHIPID25        EQU     0FDF9H
+CHIPID26        EQU     0FDFAH
+CHIPID27        EQU     0FDFBH
+CHIPID28        EQU     0FDFCH
+CHIPID29        EQU     0FDFDH
+CHIPID30        EQU     0FDFEH
+CHIPID31        EQU     0FDFFH
+
+MD3             EQU     0FCF0H
+MD2             EQU     0FCF1H
+MD1             EQU     0FCF2H
+MD0             EQU     0FCF3H
+MD5             EQU     0FCF4H
+MD4             EQU     0FCF5H
+ARCON           EQU     0FCF6H
+OPCON           EQU     0FCF7H
+
+DMA_ADC_CFG     EQU     0FA10H
+DMA_ADC_CR      EQU     0FA11H
+DMA_ADC_STA     EQU     0FA12H
+DMA_ADC_RXA     EQU     0FA17H
+DMA_ADC_RXAH    EQU     0FA17H
+DMA_ADC_RXAL    EQU     0FA18H
+DMA_ADC_CFG2    EQU     0FA19H
+DMA_ADC_CHSW0   EQU     0FA1AH
+DMA_ADC_CHSW1   EQU     0FA1BH
+
+DMA_SPI_CFG     EQU     0FA20H
+DMA_SPI_CR      EQU     0FA21H
+DMA_SPI_STA     EQU     0FA22H
+DMA_SPI_AMT     EQU     0FA23H
+DMA_SPI_DONE    EQU     0FA24H
+DMA_SPI_TXA     EQU     0FA25H
+DMA_SPI_TXAH    EQU     0FA25H
+DMA_SPI_TXAL    EQU     0FA26H
+DMA_SPI_RXA     EQU     0FA27H
+DMA_SPI_RXAH    EQU     0FA27H
+DMA_SPI_RXAL    EQU     0FA28H
+DMA_SPI_CFG2    EQU     0FA29H
+
+DMA_UR1T_CFG    EQU     0FA30H
+DMA_UR1T_CR     EQU     0FA31H
+DMA_UR1T_STA    EQU     0FA32H
+DMA_UR1T_AMT    EQU     0FA33H
+DMA_UR1T_DONE   EQU     0FA34H
+DMA_UR1T_TXA    EQU     0FA35H
+DMA_UR1T_TXAH   EQU     0FA35H
+DMA_UR1T_TXAL   EQU     0FA36H
+DMA_UR1R_CFG    EQU     0FA38H
+DMA_UR1R_CR     EQU     0FA39H
+DMA_UR1R_STA    EQU     0FA3AH
+DMA_UR1R_AMT    EQU     0FA3BH
+DMA_UR1R_DONE   EQU     0FA3CH
+DMA_UR1R_RXA    EQU     0FA3DH
+DMA_UR1R_RXAH   EQU     0FA3DH
+DMA_UR1R_RXAL   EQU     0FA3EH
+
+DMA_UR2T_CFG    EQU     0FA40H
+DMA_UR2T_CR     EQU     0FA41H
+DMA_UR2T_STA    EQU     0FA42H
+DMA_UR2T_AMT    EQU     0FA43H
+DMA_UR2T_DONE   EQU     0FA44H
+DMA_UR2T_TXA    EQU     0FA45H
+DMA_UR2T_TXAH   EQU     0FA45H
+DMA_UR2T_TXAL   EQU     0FA46H
+DMA_UR2R_CFG    EQU     0FA48H
+DMA_UR2R_CR     EQU     0FA49H
+DMA_UR2R_STA    EQU     0FA4AH
+DMA_UR2R_AMT    EQU     0FA4BH
+DMA_UR2R_DONE   EQU     0FA4CH
+DMA_UR2R_RXA    EQU     0FA4DH
+DMA_UR2R_RXAH   EQU     0FA4DH
+DMA_UR2R_RXAL   EQU     0FA4EH
+
+DMA_UR3T_CFG    EQU     0FA50H
+DMA_UR3T_CR     EQU     0FA51H
+DMA_UR3T_STA    EQU     0FA52H
+DMA_UR3T_AMT    EQU     0FA53H
+DMA_UR3T_DONE   EQU     0FA54H
+DMA_UR3T_TXA    EQU     0FA55H
+DMA_UR3T_TXAH   EQU     0FA55H
+DMA_UR3T_TXAL   EQU     0FA56H
+DMA_UR3R_CFG    EQU     0FA58H
+DMA_UR3R_CR     EQU     0FA59H
+DMA_UR3R_STA    EQU     0FA5AH
+DMA_UR3R_AMT    EQU     0FA5BH
+DMA_UR3R_DONE   EQU     0FA5CH
+DMA_UR3R_RXA    EQU     0FA5DH
+DMA_UR3R_RXAH   EQU     0FA5DH
+DMA_UR3R_RXAL   EQU     0FA5EH
+
+DMA_UR4T_CFG    EQU     0FA60H
+DMA_UR4T_CR     EQU     0FA61H
+DMA_UR4T_STA    EQU     0FA62H
+DMA_UR4T_AMT    EQU     0FA63H
+DMA_UR4T_DONE   EQU     0FA64H
+DMA_UR4T_TXA    EQU     0FA65H
+DMA_UR4T_TXAH   EQU     0FA65H
+DMA_UR4T_TXAL   EQU     0FA66H
+DMA_UR4R_CFG    EQU     0FA68H
+DMA_UR4R_CR     EQU     0FA69H
+DMA_UR4R_STA    EQU     0FA6AH
+DMA_UR4R_AMT    EQU     0FA6BH
+DMA_UR4R_DONE   EQU     0FA6CH
+DMA_UR4R_RXA    EQU     0FA6DH
+DMA_UR4R_RXAH   EQU     0FA6DH
+DMA_UR4R_RXAL   EQU     0FA6EH
+
+DMA_LCM_CFG     EQU     0FA70H
+DMA_LCM_CR      EQU     0FA71H
+DMA_LCM_STA     EQU     0FA72H
+DMA_LCM_AMT     EQU     0FA73H
+DMA_LCM_DONE    EQU     0FA74H
+DMA_LCM_TXA     EQU     0FA75H
+DMA_LCM_TXAH    EQU     0FA75H
+DMA_LCM_TXAL    EQU     0FA76H
+DMA_LCM_RXA     EQU     0FA77H
+DMA_LCM_RXAH    EQU     0FA77H
+DMA_LCM_RXAL    EQU     0FA78H
+
+$RESTORE
+

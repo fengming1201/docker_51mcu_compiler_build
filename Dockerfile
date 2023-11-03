@@ -32,5 +32,6 @@ RUN cp /etc/locale.gen /etc/locale.gen.bak;\
 		echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen;\
 		locale-gen
 ENV PATH=$PATH:/usr/share/Hex2bin-2.5
+ENV COMPILER4WHO=sdcc_51_compiler
 
 CMD ["/bin/bash"]
